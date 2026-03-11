@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "id": "languages",
+      "name": "Languages",
+      "skills": ["JavaScript", "TypeScript", "Python", "SQL"]
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "skills": ["Git", "Docker", "VS Code", "Figma"]
+    },
+    {
+      "id": "concepts",
+      "name": "Concepts",
+      "skills": ["REST APIs", "CI/CD", "Agile", "Testing"]
+    }
+  ]
+}

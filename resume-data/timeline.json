@@ -1,0 +1,42 @@
+{
+  "workExperience": [
+    {
+      "id": "work-1",
+      "company": "Company Name",
+      "jobTitle": "Job Title",
+      "startDate": "2022-01",
+      "endDate": "2024-06",
+      "responsibilities": [
+        "First responsibility. Replace with your actual bullet points.",
+        "Second responsibility. Content is displayed verbatim."
+      ]
+    },
+    {
+      "id": "work-2",
+      "company": "Current Company",
+      "jobTitle": "Current Role",
+      "startDate": "2024-07",
+      "endDate": null,
+      "responsibilities": [
+        "Current role responsibility one.",
+        "Current role responsibility two. Use null for endDate when still in role."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Degree Name (e.g. B.S. Computer Science)",
+      "institution": "Institution Name",
+      "startDate": "2018-09",
+      "endDate": "2022-05"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Certification Name",
+      "institution": "Issuing Institution"
+    }
+  ]
+}

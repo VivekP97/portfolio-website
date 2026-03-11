@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Project Title",
+      "startDate": "2023-01",
+      "endDate": "2024-03",
+      "githubUrl": "https://github.com/username/repo-name",
+      "tasks": [
+        "First task or highlight. Replace with your project details.",
+        "Second task or highlight. Content is displayed verbatim."
+      ]
+    },
+    {
+      "id": "project-2",
+      "title": "Another Project",
+      "startDate": "2022-06",
+      "endDate": "2022-12",
+      "githubUrl": "https://github.com/username/another-repo",
+      "tasks": [
+        "Add as many projects as you like.",
+        "Each project needs title, dates, GitHub URL, and tasks list."
+      ]
+    }
+  ]
+}
