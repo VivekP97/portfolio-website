@@ -1,96 +1,48 @@
+@import "tailwindcss";
+
+/* Sage green primary theme and dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Sage green palette – primary theme color */
+  --color-sage-50: #f4f6f2;
+  --color-sage-100: #e5e9df;
+  --color-sage-200: #ccd4c4;
+  --color-sage-300: #a8b59a;
+  --color-sage-400: #879b76;
+  --color-sage-500: #6b7f5c;
+  --color-sage-600: #55664a;
+  --color-sage-700: #44523c;
+  --color-sage-800: #394332;
+  --color-sage-900: #31392b;
+  --color-sage-950: #181d15;
+  /* Primary alias for components */
+  --color-primary: var(--color-sage-600);
+  --color-primary-foreground: var(--color-sage-50);
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-background: var(--color-sage-50);
+  --color-foreground: var(--color-sage-900);
+  --color-muted: var(--color-sage-600);
+  --color-border: var(--color-sage-200);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.dark,
+:root.dark {
+  --color-background: var(--color-sage-950);
+  --color-foreground: var(--color-sage-100);
+  --color-muted: var(--color-sage-300);
+  --color-border: var(--color-sage-800);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  body {
+    @apply antialiased min-h-screen;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 }
