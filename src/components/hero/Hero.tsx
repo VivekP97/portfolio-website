@@ -17,7 +17,29 @@ export function Hero() {
           <ResumeDownloadButton url={heroData.resumePdfUrl} />
         </div>
       </div>
+      <ScrollToExplore />
     </section>
+  )
+}
+
+function ScrollToExplore() {
+  const scrollToTimeline = () => {
+    document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })
+  }
+  return (
+    <button
+      type="button"
+      onClick={scrollToTimeline}
+      className="absolute bottom-8 left-1/2 flex flex-col items-center gap-2 -translate-x-1/2 text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 transition-colors"
+      aria-label="Scroll to explore"
+    >
+      <span className="text-sm font-medium">Scroll to explore</span>
+      <span className="bounce-arrow" aria-hidden>
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </span>
+    </button>
   )
 }
 

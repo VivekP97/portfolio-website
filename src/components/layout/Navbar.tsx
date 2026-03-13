@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 
 const SECTION_LINKS = [
@@ -9,6 +9,8 @@ const SECTION_LINKS = [
   { href: '#contact', label: 'Contact' },
 ] as const
 
+const SCROLL_THRESHOLD = 16
+
 type NavbarProps = {
   theme: 'light' | 'dark'
   onToggleTheme: () => void
@@ -16,9 +18,23 @@ type NavbarProps = {
 
 export function Navbar({ theme, onToggleTheme }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD)
+    onScroll() // run once for initial state
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-sage-200 bg-sage-50/95 backdrop-blur dark:border-sage-800 dark:bg-sage-950/95">
+    <header
+      className={`sticky top-0 z-50 w-full transition-[background-color,backdrop-filter] duration-200 ${
+        scrolled
+          ? 'bg-sage-50/50 backdrop-blur-md dark:bg-sage-950/50'
+          : 'bg-transparent'
+      }`}
+    >
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6" aria-label="Main navigation">
         <a href="#hero" className="text-lg font-semibold text-sage-800 dark:text-sage-200">
           Portfolio
