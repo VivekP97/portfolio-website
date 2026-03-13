@@ -5,22 +5,28 @@ import type { TimelineItemType } from '../../types'
 
 const TIMELINE_TYPE_STYLES: Record<
   TimelineItemType,
-  { card: string; iconBox: string; icon: string }
+  { card: string; iconBox: string; icon: string; badge: string }
 > = {
   work: {
     card: 'border-blue-400/70 dark:border-blue-500/60',
     iconBox: 'border-blue-300 bg-blue-50 dark:border-blue-600/60 dark:bg-blue-950/50',
     icon: 'text-blue-600 dark:text-blue-400',
+    badge:
+      'border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-600/60 dark:bg-blue-950/50 dark:text-blue-300',
   },
   education: {
     card: 'border-amber-400/70 dark:border-amber-500/60',
     iconBox: 'border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-950/40',
     icon: 'text-amber-600 dark:text-amber-400',
+    badge:
+      'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-600/60 dark:bg-amber-950/40 dark:text-amber-300',
   },
   certification: {
     card: 'border-violet-400/70 dark:border-violet-500/60',
     iconBox: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
     icon: 'text-violet-600 dark:text-violet-400',
+    badge:
+      'border-violet-300 bg-violet-50 text-violet-700 dark:border-violet-600/60 dark:bg-violet-950/50 dark:text-violet-300',
   },
 }
 
@@ -118,7 +124,7 @@ export function TimelineItem({
                   {skills!.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-sage-300 bg-sage-50 px-2.5 py-0.5 text-xs font-medium text-sage-800 dark:border-sage-600 dark:bg-sage-900/60 dark:text-sage-100"
+                      className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${styles.badge}`}
                     >
                       {skill}
                     </span>
