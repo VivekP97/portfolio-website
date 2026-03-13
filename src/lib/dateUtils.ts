@@ -11,6 +11,9 @@ export function formatMonthYear(dateStr: string): string {
  * Formats a timeline date range for display. Use null for endDate to show "Present".
  */
 export function formatDateRange(startDate: string, endDate: string | null): string {
+  if (endDate && startDate === endDate) {
+    return formatMonthYear(startDate)
+  }
   const start = formatMonthYear(startDate)
   const end = endDate ? formatMonthYear(endDate) : 'Present'
   return `${start} – ${end}`

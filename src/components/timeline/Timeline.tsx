@@ -15,6 +15,7 @@ function toEntries(): TimelineEntry[] {
       title: w.jobTitle,
       subtitle: w.company,
       responsibilities: w.responsibilities,
+      skills: w.skills,
     })
   }
   for (const e of timelineData.education) {
@@ -25,16 +26,18 @@ function toEntries(): TimelineEntry[] {
       endDate: e.endDate,
       title: e.degree,
       subtitle: e.institution,
+      skills: e.skills,
     })
   }
   for (const c of timelineData.certifications) {
     entries.push({
       type: 'certification',
       id: c.id,
-      startDate: '',
-      endDate: null,
+      startDate: c.startDate,
+      endDate: c.endDate,
       title: c.name,
       subtitle: c.institution,
+      skills: c.skills,
     })
   }
   return entries
@@ -104,6 +107,7 @@ export function Timeline() {
                         startDate={entry.startDate}
                         endDate={entry.endDate}
                         responsibilities={entry.responsibilities}
+                        skills={entry.skills}
                       />
                     </div>
                   ) : (
@@ -121,6 +125,7 @@ export function Timeline() {
                         startDate={entry.startDate}
                         endDate={entry.endDate}
                         responsibilities={entry.responsibilities}
+                        skills={entry.skills}
                       />
                     </div>
                   ) : (

@@ -40,9 +40,9 @@ Use this checklist to track implementation. Update as features and components ar
 - [x] `Timeline.tsx` – section wrapper
 - [x] Timeline list sorted by start date (descending)
 - [x] `TimelineItem.tsx` (or Work/Education/Certification item components) with type-specific icons
-- [x] Work experience: company, title, dates, responsibilities (verbatim)
-- [x] Education: degree, institution, dates
-- [x] Certifications: name, institution
+- [x] Work experience: company, title, dates, responsibilities (verbatim), optional skills/tools badges
+- [x] Education: degree, institution, dates, optional skills badges (expand to view)
+- [x] Certifications: name, institution, dates, optional skills badges (expand to view)
 - [x] Icons to differentiate work / education / certification
 
 ---

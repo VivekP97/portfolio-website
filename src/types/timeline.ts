@@ -5,6 +5,7 @@ export interface WorkExperience {
   startDate: string
   endDate: string | null
   responsibilities: string[]
+  skills?: string[]
 }
 
 export interface Education {
@@ -13,12 +14,16 @@ export interface Education {
   institution: string
   startDate: string
   endDate: string
+  skills?: string[]
 }
 
 export interface Certification {
   id: string
   name: string
   institution: string
+  startDate: string
+  endDate: string | null
+  skills?: string[]
 }
 
 export interface TimelineData {
@@ -37,4 +42,5 @@ export interface TimelineEntry {
   title: string
   subtitle: string
   responsibilities?: string[]
+  skills?: string[]
 }

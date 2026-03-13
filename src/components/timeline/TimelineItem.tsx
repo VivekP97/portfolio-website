@@ -31,6 +31,7 @@ type TimelineItemProps = {
   startDate: string
   endDate: string | null
   responsibilities?: string[]
+  skills?: string[]
 }
 
 export function TimelineItem({
@@ -40,11 +41,14 @@ export function TimelineItem({
   startDate,
   endDate,
   responsibilities,
+  skills,
 }: TimelineItemProps) {
   const [expanded, setExpanded] = useState(false)
-  const hasDetails = responsibilities && responsibilities.length > 0
+  const hasResponsibilities = responsibilities && responsibilities.length > 0
+  const hasSkills = skills && skills.length > 0
+  const hasDetails = hasResponsibilities || hasSkills
   const styles = TIMELINE_TYPE_STYLES[type]
-  const showToggle = hasDetails && type === 'work'
+  const showToggle = hasDetails
 
   return (
     <div
@@ -108,11 +112,27 @@ export function TimelineItem({
           aria-hidden={!expanded}
         >
           <div className="min-h-0 overflow-hidden">
-            <ul className="mt-3 list-inside list-disc space-y-1 border-t border-sage-200 pt-3 text-sm text-sage-700 dark:border-sage-700 dark:text-sage-300">
-              {responsibilities!.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+            <div className="mt-3 border-t border-sage-200 pt-3 dark:border-sage-700">
+              {hasSkills && (
+                <div className="mb-2 flex flex-wrap gap-2">
+                  {skills!.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-sage-300 bg-sage-50 px-2.5 py-0.5 text-xs font-medium text-sage-800 dark:border-sage-600 dark:bg-sage-900/60 dark:text-sage-100"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {hasResponsibilities && (
+                <ul className="list-inside list-disc space-y-1 text-sm text-sage-700 dark:text-sage-300">
+                  {responsibilities!.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       )}
