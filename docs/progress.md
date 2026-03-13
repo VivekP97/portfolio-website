@@ -84,6 +84,16 @@ Use this checklist to track implementation. Update as features and components ar
 
 ---
 
+## UI enhancements and animations
+
+- [x] **Hero entrance animation** – Hero content fades in and slides up subtly on page load (CSS keyframes `hero-enter`, 0.6s ease-out, applied via `.hero-enter-animation` in `style.css` and Hero content wrapper)
+- [x] **Hero name size** – Name in hero section increased (text-5xl / sm:text-6xl) for stronger presence
+- [x] **Blurred background shapes** – Full-page depth with heavily blurred sage-colored orbs (`BlurredBackground.tsx`); four blobs at original size (e.g. 50–80vmax, 280–420px, blur 80–100px); CSS variables `--blob-1`–`--blob-4` for light/dark; fixed layer behind content (z-0), main content `relative z-10`
+- [x] **Unified scrolling background** – Section backgrounds and top borders removed (Timeline, Skills, Projects, Contact); single page background so content scrolls over one continuous sage + blob layer
+- [ ] Additional section or layout animations (to be added as we implement)
+
+---
+
 ## Optional / future
 
 - [ ] Add `docs/sections/navbar.md` if you want dedicated navbar implementation notes

@@ -3,8 +3,10 @@ import { heroData } from '../../data/resumeData'
 export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 py-20 text-center sm:px-6">
-      <div className="mx-auto max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight text-sage-900 dark:text-sage-100 sm:text-5xl">
+      <div
+        className="mx-auto max-w-2xl hero-enter-animation"
+      >
+        <h1 className="text-5xl font-bold tracking-tight text-sage-900 dark:text-sage-100 sm:text-6xl">
           {heroData.name}
         </h1>
         <p className="mt-4 text-lg text-sage-700 dark:text-sage-300">
