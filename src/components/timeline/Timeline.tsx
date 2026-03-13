@@ -51,26 +51,67 @@ export function Timeline() {
 
   return (
     <section id="timeline" className="scroll-mt-16 py-16">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <h2 className="text-2xl font-bold text-sage-900 dark:text-sage-100 sm:text-3xl">
           Timeline
         </h2>
         <p className="mt-2 text-sage-600 dark:text-sage-400">
-          Education, experience, and certifications
+          Click or tap cards to expand experience details.
         </p>
-        <ul className="mt-8 list-none">
-          {sortedEntries.map((entry) => (
-            <TimelineItem
-              key={entry.id}
-              type={entry.type}
-              title={entry.title}
-              subtitle={entry.subtitle}
-              startDate={entry.startDate}
-              endDate={entry.endDate}
-              responsibilities={entry.responsibilities}
-            />
-          ))}
-        </ul>
+
+        <div className="relative mt-12">
+          {/* Vertical line */}
+          <div
+            className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-px bg-sage-300 dark:bg-sage-700"
+            aria-hidden
+          />
+          <ul className="space-y-0">
+            {sortedEntries.map((entry, index) => {
+              const isLeft = index % 2 === 0
+              return (
+                <li
+                  key={entry.id}
+                  className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 py-6 first:pt-0"
+                  style={{ gridTemplateColumns: '1fr auto 1fr' }}
+                >
+                  {isLeft ? (
+                    <div className="flex justify-end pr-4">
+                      <TimelineItem
+                        type={entry.type}
+                        title={entry.title}
+                        subtitle={entry.subtitle}
+                        startDate={entry.startDate}
+                        endDate={entry.endDate}
+                        responsibilities={entry.responsibilities}
+                      />
+                    </div>
+                  ) : (
+                    <div />
+                  )}
+                  <div className="relative z-10 flex justify-center" aria-hidden>
+                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sage-400 to-sage-600 p-[3px] dark:from-sage-500 dark:to-sage-700">
+                      <span className="h-full w-full rounded-full bg-sage-50 dark:bg-sage-950" />
+                    </span>
+                  </div>
+                  {!isLeft ? (
+                    <div className="flex justify-start pl-4">
+                      <TimelineItem
+                        type={entry.type}
+                        title={entry.title}
+                        subtitle={entry.subtitle}
+                        startDate={entry.startDate}
+                        endDate={entry.endDate}
+                        responsibilities={entry.responsibilities}
+                      />
+                    </div>
+                  ) : (
+                    <div />
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </div>
     </section>
   )

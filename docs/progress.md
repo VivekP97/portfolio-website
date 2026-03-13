@@ -93,6 +93,7 @@ Use this checklist to track implementation. Update as features and components ar
 - [x] **Navbar transparent until scroll** – Navbar is transparent at top of page; on scroll (past 16px) it gets lower-opacity background (`bg-sage-50/50`, `dark:bg-sage-950/50`) and `backdrop-blur-md`; no bottom border
 - [x] **Blurred background** – Two more blobs added (`--blob-5`, `--blob-6` in `style.css` and `BlurredBackground.tsx`); six blobs total
 - [x] **Hero “Scroll to explore”** – At bottom of hero: “Scroll to explore” label with bouncing down-arrow (CSS `bounce-arrow` keyframes, smooth scroll to timeline on click)
+- [x] **Timeline vertical layout** – Vertical line down center; items alternate left/right (starting left); each item in a card showing title, company/institution, dates; click to expand/collapse details (responsibilities for work); “Click or tap cards to expand” hint; type icons on the line (inspired by [vedika-m.vercel.app](https://vedika-m.vercel.app/))
 - [ ] Additional section or layout animations (to be added as we implement)
 
 ---
