@@ -5,6 +5,8 @@ export interface Project {
   endDate: string
   githubUrl: string
   tasks: string[]
+  /** Optional icon name for the project type (e.g. "code", "web"). When omitted, a placeholder icon is used. */
+  icon?: string
 }
 
 export interface ProjectsData {

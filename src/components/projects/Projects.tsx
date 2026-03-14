@@ -9,9 +9,9 @@ export function Projects() {
           Projects
         </h2>
         <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-          {projectsData.projects.map((project) => (
+          {projectsData.projects.map((project, index) => (
             <li key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} placeholderIconIndex={index} />
             </li>
           ))}
         </ul>
