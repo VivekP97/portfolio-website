@@ -19,7 +19,7 @@ export function Contact() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a href={`mailto:${email}`} className={buttonClass}>
             <Mail className="h-4 w-4" aria-hidden />
-            Email me
+            Email
           </a>
           {links.map((link) => (
             <a

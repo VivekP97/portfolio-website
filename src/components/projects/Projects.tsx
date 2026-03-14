@@ -8,9 +8,6 @@ export function Projects() {
         <h2 className="text-2xl font-bold text-sage-900 dark:text-sage-100 sm:text-3xl">
           Projects
         </h2>
-        <p className="mt-2 text-sage-600 dark:text-sage-400">
-          Side projects and personal work
-        </p>
         <ul className="mt-8 grid gap-6 sm:grid-cols-2">
           {projectsData.projects.map((project) => (
             <li key={project.id}>
