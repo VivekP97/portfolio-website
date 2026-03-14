@@ -12,15 +12,15 @@ export function SkillCategory({ category }: SkillCategoryProps) {
   )
 
   return (
-    <div>
+    <div className="rounded-xl border border-sage-200 bg-white p-5 shadow-sm dark:border-sage-700 dark:bg-white/5">
       <h3 className="text-sm font-semibold uppercase tracking-wide text-sage-600 dark:text-sage-400">
         {category.name}
       </h3>
-      <ul className="mt-2 flex flex-wrap gap-2">
+      <ul className="mt-3 flex flex-wrap gap-2.5">
         {sortedSkills.map((skill) => (
           <li
             key={skill}
-            className="rounded-full bg-sage-200 px-3 py-1 text-sm text-sage-800 dark:bg-sage-800 dark:text-sage-200"
+            className="rounded-lg bg-sage-100 px-4 py-2 text-sm text-sage-700 dark:bg-sage-800/60 dark:text-sage-300"
           >
             {skill}
           </li>

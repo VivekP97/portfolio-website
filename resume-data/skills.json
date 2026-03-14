@@ -14,6 +14,11 @@
       "id": "concepts",
       "name": "Concepts",
       "skills": ["REST APIs", "CI/CD", "Agile", "Testing"]
+    },
+    {
+      "id": "frameworks",
+      "name": "Frameworks & Libraries",
+      "skills": ["React", "Node.js", "Express", "Tailwind CSS"]
     }
   ]
 }
