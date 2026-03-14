@@ -1,15 +1,14 @@
+import { ChevronDown, Download } from 'lucide-react'
 import { heroData } from '../../data/resumeData'
 
 export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 py-20 text-center sm:px-6">
-      <div
-        className="mx-auto max-w-2xl hero-enter-animation"
-      >
-        <h1 className="text-5xl font-bold tracking-tight text-sage-900 dark:text-sage-100 sm:text-6xl">
+      <div className="mx-auto max-w-2xl hero-enter-animation">
+        <h1 className="text-6xl font-bold tracking-tight text-sage-900 dark:text-sage-100 sm:text-7xl">
           {heroData.name}
         </h1>
-        <p className="mt-4 text-lg text-sage-700 dark:text-sage-300">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-sage-700 dark:text-sage-300 sm:leading-loose [text-wrap:balance]">
           {heroData.professionalStatement}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -51,9 +50,10 @@ function ScrollToTimelineButton() {
     <button
       type="button"
       onClick={scrollToTimeline}
-      className="rounded-lg bg-sage-600 px-5 py-2.5 text-sm font-medium text-white shadow transition-colors hover:bg-sage-700 dark:bg-sage-500 dark:hover:bg-sage-400"
+      className="inline-flex items-center gap-2 rounded-lg bg-sage-600 px-5 py-2.5 text-sm font-medium text-white shadow transition-colors hover:bg-sage-700 dark:bg-sage-500 dark:hover:bg-sage-400"
     >
       View Timeline
+      <ChevronDown className="h-4 w-4" aria-hidden />
     </button>
   )
 }
@@ -64,8 +64,9 @@ function ResumeDownloadButton({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="rounded-lg border-2 border-sage-600 px-5 py-2.5 text-sm font-medium text-sage-700 transition-colors hover:bg-sage-100 dark:border-sage-400 dark:text-sage-300 dark:hover:bg-sage-900"
+      className="inline-flex items-center gap-2 rounded-lg border-2 border-sage-600 px-5 py-2.5 text-sm font-medium text-sage-700 transition-colors hover:bg-sage-100 dark:border-sage-400 dark:text-sage-300 dark:hover:bg-sage-900"
     >
+      <Download className="h-4 w-4" aria-hidden />
       Download Resume
     </a>
   )

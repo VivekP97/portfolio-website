@@ -81,6 +81,7 @@
   }
   body {
     @apply antialiased min-h-screen;
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
