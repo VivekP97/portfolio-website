@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section id="hero" className="relative flex min-h-[85vh] flex-col items-center justify-center px-4 py-20 text-center sm:px-6">
       <div className="mx-auto max-w-2xl hero-enter-animation">
-        <h1 className="text-6xl font-bold tracking-tight text-sage-900 dark:text-sage-100 sm:text-7xl">
+        <h1 className="text-6xl font-bold tracking-tight text-black dark:text-white sm:text-7xl">
           {heroData.name}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-sage-700 dark:text-sage-300 sm:leading-loose [text-wrap:balance]">
