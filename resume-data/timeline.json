@@ -6,6 +6,7 @@
       "jobTitle": "Full-Stack Software Developer",
       "startDate": "2025-05",
       "endDate": null,
+      "logo": "borrowell.png",
       "skills": [],
       "responsibilities": [
         "Develop cross-platform features for 2 core customer-facing products",
@@ -99,6 +100,7 @@
       "institution": "Institution Name",
       "startDate": "2018-09",
       "endDate": "2022-05",
+      "logo": "institution.png",
       "skills": ["Python", "Java", "Data Structures", "Algorithms"]
     }
   ],
@@ -109,6 +111,7 @@
       "institution": "Issuing Institution",
       "startDate": "2023-03",
       "endDate": "2023-03",
+      "logo": "cert-issuer.png",
       "skills": ["Cloud Architecture", "Security", "Networking"]
     }
   ]

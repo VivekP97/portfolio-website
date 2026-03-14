@@ -30,6 +30,8 @@ const TIMELINE_TYPE_STYLES: Record<
   },
 }
 
+const TIMELINE_LOGOS_BASE = '/timeline-logos'
+
 type TimelineItemProps = {
   type: TimelineItemType
   title: string
@@ -38,6 +40,8 @@ type TimelineItemProps = {
   endDate: string | null
   responsibilities?: string[]
   skills?: string[]
+  /** Optional PNG filename in public/timeline-logos/. When set, shown instead of the default type icon. */
+  logo?: string
 }
 
 export function TimelineItem({
@@ -48,8 +52,11 @@ export function TimelineItem({
   endDate,
   responsibilities,
   skills,
+  logo,
 }: TimelineItemProps) {
   const [expanded, setExpanded] = useState(false)
+  const [logoFailed, setLogoFailed] = useState(false)
+  const showLogo = logo && !logoFailed
   const hasResponsibilities = responsibilities && responsibilities.length > 0
   const hasSkills = skills && skills.length > 0
   const hasDetails = hasResponsibilities || hasSkills
@@ -78,10 +85,19 @@ export function TimelineItem({
     >
       <div className="flex items-start gap-3">
         <span
-          className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border ${styles.iconBox}`}
+          className={`flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border ${styles.iconBox}`}
           aria-hidden
         >
-          <ItemIcon type={type} iconClassName={styles.icon} />
+          {showLogo ? (
+            <img
+              src={`${TIMELINE_LOGOS_BASE}/${logo}`}
+              alt=""
+              className="h-full w-full object-contain p-0.5"
+              onError={() => setLogoFailed(true)}
+            />
+          ) : (
+            <ItemIcon type={type} iconClassName={styles.icon} />
+          )}
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-3">

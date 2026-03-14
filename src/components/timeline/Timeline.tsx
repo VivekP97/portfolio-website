@@ -16,6 +16,7 @@ function toEntries(): TimelineEntry[] {
       subtitle: w.company,
       responsibilities: w.responsibilities,
       skills: w.skills,
+      logo: w.logo,
     })
   }
   for (const e of timelineData.education) {
@@ -27,6 +28,7 @@ function toEntries(): TimelineEntry[] {
       title: e.degree,
       subtitle: e.institution,
       skills: e.skills,
+      logo: e.logo,
     })
   }
   for (const c of timelineData.certifications) {
@@ -38,6 +40,7 @@ function toEntries(): TimelineEntry[] {
       title: c.name,
       subtitle: c.institution,
       skills: c.skills,
+      logo: c.logo,
     })
   }
   return entries
@@ -108,6 +111,7 @@ export function Timeline() {
                         endDate={entry.endDate}
                         responsibilities={entry.responsibilities}
                         skills={entry.skills}
+                        logo={entry.logo}
                       />
                     </div>
                   ) : (
@@ -126,6 +130,7 @@ export function Timeline() {
                         endDate={entry.endDate}
                         responsibilities={entry.responsibilities}
                         skills={entry.skills}
+                        logo={entry.logo}
                       />
                     </div>
                   ) : (
