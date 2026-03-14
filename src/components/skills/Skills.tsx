@@ -4,7 +4,7 @@ import { SkillCategory } from './SkillCategory'
 export function Skills() {
   return (
     <section id="skills" className="scroll-mt-16 py-16">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-2xl font-bold text-sage-900 dark:text-sage-100 sm:text-3xl">
           Skills
         </h2>

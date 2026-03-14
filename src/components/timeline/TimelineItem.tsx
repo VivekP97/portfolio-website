@@ -71,7 +71,7 @@ export function TimelineItem({
             }
           : undefined
       }
-      className={`w-full max-w-sm rounded-xl border bg-white p-4 text-left shadow-sm transition-shadow dark:bg-white/5 ${styles.card} ${
+      className={`w-full max-w-md rounded-xl border bg-white p-4 text-left shadow-sm transition-shadow dark:bg-white/5 ${styles.card} ${
         hasDetails ? 'cursor-pointer hover:shadow-md' : ''
       }`}
       aria-expanded={hasDetails ? expanded : undefined}
@@ -132,7 +132,7 @@ export function TimelineItem({
                 </div>
               )}
               {hasResponsibilities && (
-                <ul className="list-inside list-disc space-y-1 text-sm text-sage-700 dark:text-sage-300">
+                <ul className="list-outside list-disc space-y-1 pl-5 text-sm text-sage-700 dark:text-sage-300">
                   {responsibilities!.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}

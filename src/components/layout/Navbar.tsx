@@ -37,7 +37,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6" aria-label="Main navigation">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6" aria-label="Main navigation">
         <a href="#hero" className="text-lg font-semibold text-black dark:text-white">
           VP
         </a>
