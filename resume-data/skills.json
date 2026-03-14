@@ -1,24 +1,24 @@
 {
   "categories": [
     {
-      "id": "languages",
-      "name": "Languages",
-      "skills": ["JavaScript", "TypeScript", "Python", "SQL"]
+      "id": "languages_frameworks",
+      "name": "Languages & Frameworks",
+      "skills": ["Bash", "C", "C#/.NET", "Excel VBA", "Go/Golang", "Java", "JavaScript", "JSON", "Powershell", "React", "SQL", "Vue"]
     },
     {
       "id": "tools",
       "name": "Tools",
-      "skills": ["Git", "Docker", "VS Code", "Figma"]
+      "skills": ["Azure", "Bitbucket", "Confluence", "Docker", "Expo Orbit", "Git", "Grafana", "Jenkins", "JIRA", "Kubernetes", "Postman", "SonarQube"]
+    },
+    {
+      "id": "systms_apis",
+      "name": "Systems & APIs",
+      "skills": ["Microsoft Graph API", "MongoDB", "RabbitMQ", "REST APIs", "Staxbill/Fusebill API"]
     },
     {
       "id": "concepts",
       "name": "Concepts",
-      "skills": ["REST APIs", "CI/CD", "Agile", "Testing"]
-    },
-    {
-      "id": "frameworks",
-      "name": "Frameworks & Libraries",
-      "skills": ["React", "Node.js", "Express", "Tailwind CSS"]
+      "skills": ["Agile Methodology", "Memory/CPU Optimization", "Microservice Architecture", "OOP", "Version Control Strategies"]
     }
   ]
 }
