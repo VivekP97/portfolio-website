@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useActiveSection } from '../../hooks/useActiveSection'
+import { heroData } from '../../data/resumeData'
 import { ThemeToggle } from './ThemeToggle'
 
 const SECTION_LINKS = [
@@ -60,6 +61,16 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
               </li>
             )
           })}
+          <li>
+            <a
+              href={heroData.resumePdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md px-3 py-2 text-sm font-medium text-sage-700 transition-colors hover:bg-sage-200 hover:text-sage-900 dark:text-sage-300 dark:hover:bg-sage-800 dark:hover:text-sage-100"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className="flex items-center gap-2">
@@ -103,6 +114,17 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
               </li>
             )
           })}
+          <li>
+            <a
+              href={heroData.resumePdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-md px-3 py-2 text-sm font-medium text-sage-700 hover:bg-sage-200 dark:text-sage-300 dark:hover:bg-sage-800"
+              onClick={() => setMenuOpen(false)}
+            >
+              Resume
+            </a>
+          </li>
         </ul>
       </div>
     </header>
