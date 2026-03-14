@@ -1,3 +1,4 @@
+import { Github, Linkedin } from 'lucide-react'
 import { contactData } from '../../data/resumeData'
 
 export function Contact() {
@@ -44,6 +45,12 @@ export function Contact() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-sage-300 px-4 py-2 text-sm font-medium text-sage-700 transition-colors hover:bg-sage-100 dark:border-sage-700 dark:text-sage-300 dark:hover:bg-sage-800"
             >
+              {link.id === 'github' && (
+                <Github className="h-4 w-4" aria-hidden />
+              )}
+              {link.id === 'linkedin' && (
+                <Linkedin className="h-4 w-4" aria-hidden />
+              )}
               {link.label}
             </a>
           ))}
