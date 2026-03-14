@@ -1,5 +1,5 @@
 /**
- * Full-page blurred shapes layer for depth. Sage green palette, heavy blur.
+ * Full-page blurred shapes layer for depth. Dusty seafoam palette, heavy blur.
  * Unified background – content scrolls over it; no section blocks.
  */
 export function BlurredBackground() {
@@ -8,7 +8,7 @@ export function BlurredBackground() {
       className="pointer-events-none fixed inset-0 z-0 overflow-hidden"
       aria-hidden
     >
-      {/* Large orbs – sage tones, heavily blurred */}
+      {/* Large orbs – dusty seafoam tones, heavily blurred */}
       <div
         className="absolute -left-[20%] top-[10%] h-[min(80vmax,420px)] w-[min(80vmax,420px)] rounded-full opacity-30 blur-[100px] dark:opacity-25"
         style={{ background: 'var(--blob-1)' }}

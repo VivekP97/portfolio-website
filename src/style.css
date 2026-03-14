@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
-/* Sage green primary theme and dark mode */
+/* Dusty seafoam primary theme and dark mode */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Sage green palette – primary theme color */
-  --color-sage-50: #f4f6f2;
-  --color-sage-100: #e5e9df;
-  --color-sage-200: #ccd4c4;
-  --color-sage-300: #a8b59a;
-  --color-sage-400: #879b76;
-  --color-sage-500: #6b7f5c;
-  --color-sage-600: #55664a;
-  --color-sage-700: #44523c;
-  --color-sage-800: #394332;
-  --color-sage-900: #31392b;
-  --color-sage-950: #181d15;
+  /* Dusty seafoam palette – primary theme color (green-teal, muted) */
+  --color-sage-50: #f1f6f4;
+  --color-sage-100: #dcebe5;
+  --color-sage-200: #b8d9cc;
+  --color-sage-300: #8bc0ae;
+  --color-sage-400: #5fa38d;
+  --color-sage-500: #458873;
+  --color-sage-600: #396e5e;
+  --color-sage-700: #31594d;
+  --color-sage-800: #2a4a41;
+  --color-sage-900: #253f38;
+  --color-sage-950: #112420;
   /* Primary alias for components */
   --color-primary: var(--color-sage-600);
   --color-primary-foreground: var(--color-sage-50);

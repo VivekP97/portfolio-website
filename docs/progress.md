@@ -7,7 +7,7 @@ Use this checklist to track implementation. Update as features and components ar
 ## Project setup
 
 - [x] Initialize React + TypeScript project (e.g. Vite)
-- [x] Configure Tailwind CSS with sage green as primary theme color
+- [x] Configure Tailwind CSS with dusty seafoam as primary theme color
 - [x] Set up light/dark theme (CSS variables or Tailwind dark mode)
 - [x] Ensure mobile-friendly viewport and responsive utilities
 - [x] Create `resume-data` folder and placeholder/sample JSON files for each section
@@ -78,7 +78,7 @@ Use this checklist to track implementation. Update as features and components ar
 
 - [x] All section content loaded from JSON; no hardcoded resume content
 - [x] Text content (statements, responsibilities, tasks) copied verbatim – no summarization
-- [x] Sage green primary theme applied; light and dark modes working
+- [x] Dusty seafoam primary theme applied; light and dark modes working
 - [x] Responsive layout and navigation tested on mobile
 - [ ] Resume PDF file added and download button tested (set `resumePdfUrl` in `hero.json` to your PDF path, e.g. `/Vivek Parmar - Resume.pdf` if the file is in `public/`)
 
@@ -88,8 +88,8 @@ Use this checklist to track implementation. Update as features and components ar
 
 - [x] **Hero entrance animation** – Hero content fades in and slides up subtly on page load (CSS keyframes `hero-enter`, 0.6s ease-out, applied via `.hero-enter-animation` in `style.css` and Hero content wrapper)
 - [x] **Hero name size** – Name in hero section increased (text-5xl / sm:text-6xl) for stronger presence
-- [x] **Blurred background shapes** – Full-page depth with heavily blurred sage-colored orbs (`BlurredBackground.tsx`); six blobs at original-size scale (e.g. 45–80vmax, 260–420px, blur 78–100px); CSS variables `--blob-1`–`--blob-6` for light/dark; fixed layer behind content (z-0), main content `relative z-10`
-- [x] **Unified scrolling background** – Section backgrounds and top borders removed (Timeline, Skills, Projects, Contact); single page background so content scrolls over one continuous sage + blob layer
+- [x] **Blurred background shapes** – Full-page depth with heavily blurred dusty-seafoam-colored orbs (`BlurredBackground.tsx`); six blobs at original-size scale (e.g. 45–80vmax, 260–420px, blur 78–100px); CSS variables `--blob-1`–`--blob-6` for light/dark; fixed layer behind content (z-0), main content `relative z-10`
+- [x] **Unified scrolling background** – Section backgrounds and top borders removed (Timeline, Skills, Projects, Contact); single page background so content scrolls over one continuous dusty seafoam + blob layer
 - [x] **Navbar transparent until scroll** – Navbar is transparent at top of page; on scroll (past 16px) it gets lower-opacity background (`bg-sage-50/50`, `dark:bg-sage-950/50`) and `backdrop-blur-md`; no bottom border
 - [x] **Blurred background** – Two more blobs added (`--blob-5`, `--blob-6` in `style.css` and `BlurredBackground.tsx`); six blobs total
 - [x] **Hero “Scroll to explore”** – At bottom of hero: “Scroll to explore” label with bouncing down-arrow (CSS `bounce-arrow` keyframes, smooth scroll to timeline on click)

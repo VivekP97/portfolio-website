@@ -39,5 +39,5 @@ Data is stored in `resume-data/hero.json`. Content (e.g. professional statement)
 
 ## Notes
 
-- Hero is the landing block; keep layout clean and aligned with the sage green theme and light/dark modes.
+- Hero is the landing block; keep layout clean and aligned with the dusty seafoam theme and light/dark modes.
 - Ensure the scroll target ID (e.g. `id="timeline"`) matches the Timeline section’s ID used in the navbar and scroll button.
