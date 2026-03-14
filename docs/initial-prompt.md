@@ -10,7 +10,7 @@ The content for items like work experience and certifications should be copied v
 
 The following are some notes about the user experience and user interface:
 
-- The website should have a modern and elegant theme. Use a sophisticated green as the primary theme color (currently: dusty seafoam, a muted green-teal).
+- The website should have a modern and elegant theme. Use a sophisticated green as the primary theme color (currently: pastel/mint-celadon, a lighter airier green).
 - The website should be mobile-friendly.
 - The website should have light and dark theme modes which can be toggled from the navbar.
 - Use React, Typescript, and Tailwind CSS to create the website.
