@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useActiveSection } from '../../hooks/useActiveSection'
 import { ThemeToggle } from './ThemeToggle'
 
 const SECTION_LINKS = [
-  { href: '#hero', label: 'Home' },
   { href: '#timeline', label: 'Timeline' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
@@ -19,6 +19,7 @@ type NavbarProps = {
 export function Navbar({ theme, onToggleTheme }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const activeSection = useActiveSection()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD)
@@ -37,21 +38,28 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
     >
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6" aria-label="Main navigation">
         <a href="#hero" className="text-lg font-semibold text-sage-800 dark:text-sage-200">
-          Portfolio
+          VP
         </a>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-1 md:flex">
-          {SECTION_LINKS.map(({ href, label }) => (
-            <li key={href}>
-              <a
-                href={href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-sage-700 transition-colors hover:bg-sage-200 hover:text-sage-900 dark:text-sage-300 dark:hover:bg-sage-800 dark:hover:text-sage-100"
-              >
-                {label}
-              </a>
-            </li>
-          ))}
+          {SECTION_LINKS.map(({ href, label }) => {
+            const isActive = activeSection !== null && href === `#${activeSection}`
+            return (
+              <li key={href}>
+                <a
+                  href={href}
+                  className={`rounded-md px-3 py-2 text-sm transition-colors hover:bg-sage-200 hover:text-sage-900 dark:hover:bg-sage-800 dark:hover:text-sage-100 ${
+                    isActive
+                      ? 'font-semibold text-sage-900 dark:text-sage-100'
+                      : 'font-medium text-sage-700 dark:text-sage-300'
+                  }`}
+                >
+                  {label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="flex items-center gap-2">
@@ -77,17 +85,24 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
         aria-hidden={!menuOpen}
       >
         <ul className="flex flex-col gap-0 px-4 py-2">
-          {SECTION_LINKS.map(({ href, label }) => (
-            <li key={href}>
-              <a
-                href={href}
-                className="block rounded-md px-3 py-2 text-sm font-medium text-sage-700 hover:bg-sage-200 dark:text-sage-300 dark:hover:bg-sage-800"
-                onClick={() => setMenuOpen(false)}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
+          {SECTION_LINKS.map(({ href, label }) => {
+            const isActive = activeSection !== null && href === `#${activeSection}`
+            return (
+              <li key={href}>
+                <a
+                  href={href}
+                  className={`block rounded-md px-3 py-2 text-sm hover:bg-sage-200 dark:hover:bg-sage-800 ${
+                    isActive
+                      ? 'font-semibold text-sage-900 dark:text-sage-100'
+                      : 'font-medium text-sage-700 dark:text-sage-300'
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </header>

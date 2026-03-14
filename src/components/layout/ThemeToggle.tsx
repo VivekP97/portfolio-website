@@ -18,7 +18,7 @@ export function ThemeToggle({
       className={`rounded-lg p-2 transition-colors hover:bg-sage-200 dark:hover:bg-sage-800 ${className}`}
       aria-label={ariaLabel}
     >
-      {theme === 'light' ? <SunIcon /> : <MoonIcon />}
+      {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>
   )
 }
