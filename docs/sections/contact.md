@@ -6,8 +6,9 @@ The Contact section provides your contact details and links to your professional
 
 ## Information Contained
 
-- **Contact details** – Email, phone (optional), location (optional), or other direct contact info.
-- **Social / external links** – Links to LinkedIn, GitHub, Twitter/X, portfolio, or other profiles. Each link has a label and URL.
+- **Section title** – Displayed as: "Let's Connect — Reach Out via Email, LinkedIn, or GitHub." (In the repo this section is still referred to as the "Contact section.")
+- **Primary actions** – "Email me" button (mailto), plus social links (LinkedIn, GitHub, etc.) as buttons with icons. Buttons use a white/contrasting background so they stand out from the page background.
+- **Contact details** – Phone and location shown below the buttons when present; email is available via the "Email me" button.
 
 Content should be used as provided in the data (e.g. email and link labels copied verbatim).
 
@@ -45,9 +46,9 @@ Data is stored in `resume-data/contact.json`. Structure is extendable for new co
 }
 ```
 
-- **email** (string, required) – Primary email; can be rendered as a `mailto:` link.
-- **phone** (string, optional) – Rendered as a `tel:` link if present.
-- **location** (string, optional) – Free text (e.g. city/country).
+- **email** (string, required) – Primary email; used for the "Email me" button (mailto).
+- **phone** (string, optional) – Shown below the buttons and rendered as a `tel:` link if present.
+- **location** (string, optional) – Shown below the buttons when present.
 - **links** (array of objects, required)
   - `id` (string, required) – Unique key (e.g. for React keys or icon mapping).
   - `label` (string, required) – Display text (e.g. "LinkedIn", "GitHub").
