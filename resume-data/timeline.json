@@ -124,7 +124,7 @@
       "institution": "Data Sciences Institute",
       "startDate": "2026-01",
       "endDate": "2026-02",
-      "skills": ["Artificial Intelligence", "Embeddings", "Vector Databases", "Python", "Pydantic", "Evaluation", "Prompt Engineering", "RAG"]
+      "skills": ["Artificial Intelligence", "Embeddings", "Vector Databases", "Python", "Pydantic", "Evaluation", "Prompt Engineering", "RAG", "Jupyter Notebooks"]
     },
     {
       "id": "application-security-for-developers",
