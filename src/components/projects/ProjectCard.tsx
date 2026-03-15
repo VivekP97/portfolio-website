@@ -1,8 +1,17 @@
-import { Box, Code2, FolderGit2, Github, Layout, type LucideIcon } from 'lucide-react'
+import { Box, BicepsFlexed, Code2, FolderGit2, Github, Layout, type LucideIcon } from 'lucide-react'
 import { formatDateRange } from '../../lib/dateUtils'
 import type { Project } from '../../types'
 
 const PLACEHOLDER_ICONS: LucideIcon[] = [Code2, FolderGit2, Layout, Box]
+
+/** Map icon names (e.g. "biceps-flexed") to Lucide icon components. Add entries here as needed. */
+const NAMED_ICONS: Record<string, LucideIcon> = {
+  'biceps-flexed': BicepsFlexed,
+  'code': Code2,
+  'folder-git': FolderGit2,
+  'layout': Layout,
+  'box': Box,
+}
 
 const ICON_BOX_CLASS =
   'flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-sage-200 bg-sage-100 dark:border-sage-700 dark:bg-sage-800/50'
@@ -13,8 +22,11 @@ type ProjectCardProps = {
   placeholderIconIndex: number
 }
 
-function ProjectIcon({ placeholderIconIndex }: { placeholderIconIndex: number }) {
-  const IconComponent = PLACEHOLDER_ICONS[placeholderIconIndex % PLACEHOLDER_ICONS.length]
+function ProjectIcon({ project, placeholderIconIndex }: { project: Project; placeholderIconIndex: number }) {
+  const IconComponent =
+    project.icon != null && NAMED_ICONS[project.icon]
+      ? NAMED_ICONS[project.icon]
+      : PLACEHOLDER_ICONS[placeholderIconIndex % PLACEHOLDER_ICONS.length]
   return (
     <span className={ICON_BOX_CLASS} aria-hidden>
       <IconComponent className={ICON_CLASS} aria-hidden />
@@ -26,7 +38,7 @@ export function ProjectCard({ project, placeholderIconIndex }: ProjectCardProps)
   return (
     <article className="flex flex-col rounded-xl border border-sage-200 bg-white p-5 shadow-sm dark:border-sage-700 dark:bg-white/5">
       <div className="flex items-start gap-3">
-        <ProjectIcon placeholderIconIndex={placeholderIconIndex} />
+        <ProjectIcon project={project} placeholderIconIndex={placeholderIconIndex} />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h3 className="text-lg font-semibold text-sage-900 dark:text-sage-100">
