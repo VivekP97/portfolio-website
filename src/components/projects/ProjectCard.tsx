@@ -1,4 +1,4 @@
-import { Box, BicepsFlexed, Code2, FolderGit2, Github, Layout, type LucideIcon } from 'lucide-react'
+import { Box, BicepsFlexed, Code2, CodeXml, FolderGit2, Github, Grid3x3, Layout, type LucideIcon, ListTodo } from 'lucide-react'
 import { formatDateRange } from '../../lib/dateUtils'
 import type { Project } from '../../types'
 
@@ -7,6 +7,9 @@ const PLACEHOLDER_ICONS: LucideIcon[] = [Code2, FolderGit2, Layout, Box]
 /** Map icon names (e.g. "biceps-flexed") to Lucide icon components. Add entries here as needed. */
 const NAMED_ICONS: Record<string, LucideIcon> = {
   'biceps-flexed': BicepsFlexed,
+  'code-xml': CodeXml,
+  'grid-3x3': Grid3x3,
+  'list-todo': ListTodo,
   'code': Code2,
   'folder-git': FolderGit2,
   'layout': Layout,

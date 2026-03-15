@@ -5,6 +5,7 @@
       "title": "Personal Portfolio Website",
       "startDate": "2026-03",
       "endDate": "2026-03",
+      "icon": "code-xml",
       "githubUrl": "https://github.com/VivekP97/portfolio-website",
       "tasks": [
         "Developed a personal portfolio website using React, TypeScript, and Tailwind CSS to showcase my skills, experience, and projects",
@@ -21,6 +22,28 @@
       "tasks": [
         "Created a static website to advertise my brother's physiotherapy practice using HTML, CSS, and JavaScript",
         "Later revamped the website with a modern look using AI"
+      ]
+    },
+    {
+      "id": "tic-tac-toe",
+      "title": "Tic-Tac-Toe Game",
+      "startDate": "2025-02",
+      "endDate": "2025-02",
+      "icon": "grid-3x3",
+      "githubUrl": "https://github.com/VivekP97/Tic-Tac-Toe",
+      "tasks": [
+        "Created a simple Tic-Tac-Toe game using React and JavaScript as a learning exercise"
+      ]
+    },
+    {
+      "id": "todo-app",
+      "title": "Todo App",
+      "startDate": "2025-02",
+      "endDate": "2025-02",
+      "icon": "list-todo",
+      "githubUrl": "https://github.com/VivekP97/Todo-App",
+      "tasks": [
+        "Created a simple Todo app using React and JavaScript as a learning exercise"
       ]
     }
   ]
