@@ -151,9 +151,9 @@ export function Timeline() {
 }
 
 const DOT_GRADIENT: Record<TimelineEntry['type'], string> = {
-  work: 'from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700',
-  education: 'from-amber-400 to-amber-600 dark:from-amber-500 dark:to-amber-700',
-  certification: 'from-violet-400 to-violet-600 dark:from-violet-500 dark:to-violet-700',
+  work: 'from-violet-400 to-violet-600 dark:from-violet-500 dark:to-violet-700',
+  education: 'from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700',
+  certification: 'from-amber-400 to-amber-600 dark:from-amber-500 dark:to-amber-700',
 }
 
 const LEGEND_ICON_STYLES: Record<
@@ -161,16 +161,16 @@ const LEGEND_ICON_STYLES: Record<
   { box: string; icon: string }
 > = {
   work: {
+    box: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
+    icon: 'text-violet-600 dark:text-violet-400',
+  },
+  education: {
     box: 'border-blue-300 bg-blue-50 dark:border-blue-600/60 dark:bg-blue-950/50',
     icon: 'text-blue-600 dark:text-blue-400',
   },
-  education: {
+  certification: {
     box: 'border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-950/40',
     icon: 'text-amber-600 dark:text-amber-400',
-  },
-  certification: {
-    box: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
-    icon: 'text-violet-600 dark:text-violet-400',
   },
 }
 

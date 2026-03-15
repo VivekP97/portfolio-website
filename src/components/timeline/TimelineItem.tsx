@@ -9,6 +9,14 @@ const TIMELINE_TYPE_STYLES: Record<
   { card: string; cardLeftBorder: string; iconBox: string; icon: string; badge: string }
 > = {
   work: {
+    card: 'border-violet-400/70 dark:border-violet-500/60',
+    cardLeftBorder: 'border-l-4 border-l-violet-500 dark:border-l-violet-400',
+    iconBox: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
+    icon: 'text-violet-600 dark:text-violet-400',
+    badge:
+      'border-violet-300 bg-violet-50 text-violet-700 dark:border-violet-600/60 dark:bg-violet-950/50 dark:text-violet-300',
+  },
+  education: {
     card: 'border-blue-400/70 dark:border-blue-500/60',
     cardLeftBorder: 'border-l-4 border-l-blue-500 dark:border-l-blue-400',
     iconBox: 'border-blue-300 bg-blue-50 dark:border-blue-600/60 dark:bg-blue-950/50',
@@ -16,21 +24,13 @@ const TIMELINE_TYPE_STYLES: Record<
     badge:
       'border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-600/60 dark:bg-blue-950/50 dark:text-blue-300',
   },
-  education: {
+  certification: {
     card: 'border-amber-400/70 dark:border-amber-500/60',
     cardLeftBorder: 'border-l-4 border-l-amber-500 dark:border-l-amber-400',
     iconBox: 'border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-950/40',
     icon: 'text-amber-600 dark:text-amber-400',
     badge:
       'border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-600/60 dark:bg-amber-950/40 dark:text-amber-300',
-  },
-  certification: {
-    card: 'border-violet-400/70 dark:border-violet-500/60',
-    cardLeftBorder: 'border-l-4 border-l-violet-500 dark:border-l-violet-400',
-    iconBox: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
-    icon: 'text-violet-600 dark:text-violet-400',
-    badge:
-      'border-violet-300 bg-violet-50 text-violet-700 dark:border-violet-600/60 dark:bg-violet-950/50 dark:text-violet-300',
   },
 }
 
