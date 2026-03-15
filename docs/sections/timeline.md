@@ -10,7 +10,7 @@ The Timeline section presents your education, work experience, and certification
 - **Education** – Degree name, institution name, start and end dates, an optional list of skills (e.g. coursework, technologies; rendered as badges on expand), and an optional logo (PNG in `public/timeline-logos/`; when set, shown instead of the default graduation cap icon).
 - **Certifications** – Certification name, issuing institution, start/end date (for correct chronological placement), an optional list of skills/domains (rendered as badges on expand), and an optional logo (PNG in `public/timeline-logos/`; when set, shown instead of the default award icon).
 
-All narrative content (e.g. responsibility bullets) must be copied verbatim from the JSON files; do not summarize or modify.
+All narrative content (e.g. responsibility bullets) must be copied verbatim from the JSON files; do not summarize or modify. To highlight keywords, surround a word or phrase with double asterisks in the content (e.g. `**keyword**` or `**phrase**`); that segment is rendered in bold in the timeline. This applies to title, subtitle, and responsibility text. The sequence `**` is reserved for this; nesting is not supported.
 
 ## React Components
 
@@ -117,5 +117,6 @@ Data is stored in `resume-data/timeline.json`. Structure is modular so new entri
 ## Notes
 
 - **Logo folder**: Place PNG files in `public/timeline-logos/`. Reference them in the JSON with the optional `logo` field (filename only, e.g. `"logo": "company.png"`). If a logo is specified but the file is missing, the UI falls back to the default type icon.
+- **Bold markup**: In timeline text (title, subtitle, responsibilities), surrounding a word or phrase with double asterisks (`**like this**`) renders it in bold. Content is otherwise shown verbatim. The characters `**` are reserved for this; nesting (e.g. `**a **b** c**`) is not supported. Unclosed `**` is shown as literal.
 - Schema is extendable (e.g. add `url` for certifications later) without breaking existing components.
 - Responsibility text must be displayed exactly as in the JSON.

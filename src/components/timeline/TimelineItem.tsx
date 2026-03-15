@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Award, BriefcaseBusiness, ChevronDown, ChevronUp, GraduationCap } from 'lucide-react'
 import { formatDateRange } from '../../lib/dateUtils'
+import { renderWithBold } from '../../lib/textUtils'
 import type { TimelineItemType } from '../../types'
 
 const TIMELINE_TYPE_STYLES: Record<
@@ -110,9 +111,9 @@ export function TimelineItem({
                 </p>
               )}
               <h3 className={`font-semibold text-sage-900 dark:text-sage-100 ${startDate ? 'mt-0.5' : ''}`}>
-                {title}
+                {renderWithBold(title)}
               </h3>
-              <p className="text-sage-700 dark:text-sage-300">{subtitle}</p>
+              <p className="text-sage-700 dark:text-sage-300">{renderWithBold(subtitle)}</p>
             </div>
             {showToggle && (
               <div className="flex shrink-0 items-center gap-1 text-xs font-medium text-sage-600 dark:text-sage-400">
@@ -152,7 +153,7 @@ export function TimelineItem({
               {hasResponsibilities && (
                 <ul className="list-outside list-disc space-y-1 pl-5 text-sm text-sage-700 dark:text-sage-300">
                   {responsibilities!.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i}>{renderWithBold(item)}</li>
                   ))}
                 </ul>
               )}

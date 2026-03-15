@@ -16,58 +16,58 @@
     },
     {
       "id": "emailgistics-3",
-      "company": "Emailgistics Corp.",
+      "company": "Emailgistics",
       "jobTitle": "Senior Full-Stack Developer",
       "logo": "emailgistics.png",
       "startDate": "2023-11",
       "endDate": "2025-05",
       "skills": [],
       "responsibilities": [
-        "Developed 15+ Go microservices exposing secure APIs to integrate with a Vue.js web app in a cloud environment",
+        "Developed 15+ **Go microservices** exposing secure APIs to integrate with a **Vue.js** web app in a cloud environment",
         "Leveraged version control strategies, pull requests, and code reviews to mitigate bugs and maintain good coding standards",
-        "Resolved bugs and performance issues across the stack with root-cause analysis and quick turnarounds",
-        "Deployed containerized apps to collect logs and metrics across the stack and ship them to Grafana Cloud for monitoring"
+        "Resolved bugs and performance issues across the stack with **root-cause analysis** and quick turnarounds",
+        "Deployed **containerized apps** to collect logs and metrics across the stack and ship them to **Grafana Cloud** for monitoring"
       ]
     },
     {
       "id": "emailgistics-2",
-      "company": "Emailgistics Corp.",
+      "company": "Emailgistics",
       "jobTitle": "Full-Stack Software Developer",
       "logo": "emailgistics.png",
       "startDate": "2020-04",
       "endDate": "2023-10",
       "skills": [],
       "responsibilities": [
-        "Authored comprehensive technical documentation for 3 key features and managed the development of 5 major features, delivering fully-functional solutions within project deadlines to ensure customer satisfaction",
-        "Crafted a multi-phase plan to seamlessly restructure millions of stored data documents and redesigned data aggregation pipelines to substantially improve runtime performance, resolving scalability concerns with zero downtime",
-        "Co-led the upgrade of our web application from Vue 2 to Vue 3; a large-scale project involving extensive code refactoring and partitioning of monolothic components",
-        "Deployed a RabbitMQ cluster to our microservice environment using Kubernetes and Docker which processes over 2 million messages per day, supporting 4 major features with 24/7 uptime"
+        "Authored **comprehensive technical documentation** for 3 key features and managed the development of 5 major features, **delivering fully-functional solutions** within project deadlines to ensure customer satisfaction",
+        "Crafted a multi-phase plan to seamlessly **restructure millions of data documents** and **redesigned data aggregation pipelines** to substantially improve runtime performance, resolving scalability concerns with **zero downtime**",
+        "Co-led the upgrade of our web application from Vue 2 to Vue 3; a large-scale project involving extensive code refactoring and **partitioning of monolothic components**",
+        "Deployed a **RabbitMQ** cluster to our microservice environment using **Kubernetes** and **Docker** which processes over **2 million messages per day**, supporting 4 major features with 99% uptime"
       ]
     },
     {
       "id": "emailgistics-1",
-      "company": "Emailgistics Corp.",
+      "company": "Emailgistics",
       "jobTitle": "Junior Full-Stack Developer (Co-op)",
       "logo": "emailgistics.png",
       "startDate": "2019-01",
       "endDate": "2020-03",
       "skills": [],
       "responsibilities": [
-        "Contributed to design and architecture planning to develop the core functionality for the MVP release",
-        "Created the Demo microservice that integrated with the Microsoft Graph API to imitate 24/7 mailbox activity in Outlook",
+        "Contributed to design and architecture planning to develop the core functionality for the **MVP release**",
+        "Created the Demo microservice that integrated with the **Microsoft Graph API** to imitate 24/7 mailbox activity in Outlook",
         "The Demo microservice was leveraged by the sales team for presentations and served as a QA tool for the engineering team"
       ]
     },
     {
       "id": "rogers-communications",
-      "company": "Rogers Communications Inc.",
+      "company": "Rogers Communications",
       "jobTitle": "Automation Technician (Co-op)",
       "logo": "rogers.svg",
       "startDate": "2018-09",
       "endDate": "2018-12",
       "skills": [],
       "responsibilities": [
-        "Facilitated the integration of SonarQube with 20+ internal projects, applying static code analysis to enhance code quality",
+        "Facilitated the integration of **SonarQube** with 20+ internal projects, applying static code analysis to enhance code quality",
         "Produced comprehensive documentation for installing and configuring SonarQube Scanner and the SonarLint plugin in Eclipse IDE, resulting in a streamlined transition for 20+ developers",
         "Documented instructions to upload JUnit test results and code coverage reports to SonarQube to gather code quality metrics"
       ]
@@ -81,8 +81,7 @@
       "endDate": "2018-08",
       "skills": [],
       "responsibilities": [
-        "Developed an Excel VBA macro to automate release management processes in HP Application Lifecycle Management",
-        "Maintained scripts to monitor the status of internal systems and applications to ensure maximum uptime"
+        "Developed an **Excel VBA macro** to automate release management processes in **HP Application Lifecycle Management**"
       ]
     },
     {
@@ -95,7 +94,7 @@
       "skills": [],
       "responsibilities": [
         "Maintained scripts to monitor the status of internal systems and applications to ensure maximum uptime",
-        "Implemented an error-handling module across all scripts to enhance security and robustness"
+        "Implemented an **error-handling module** across all scripts to **enhance security** and robustness"
       ]
     }
   ],
