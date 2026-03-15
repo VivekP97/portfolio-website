@@ -143,7 +143,7 @@ export function TimelineItem({
             <div className="mt-3 border-t border-sage-200 pt-3 dark:border-sage-700">
               {hasSkills && (
                 <div className="mb-2 flex flex-wrap gap-2">
-                  {skills!.map((skill) => (
+                  {[...skills!].sort((a, b) => a.localeCompare(b)).map((skill) => (
                     <span
                       key={skill}
                       className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${styles.badge}`}
