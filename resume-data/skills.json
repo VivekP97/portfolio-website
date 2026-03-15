@@ -3,7 +3,7 @@
     {
       "id": "languages_frameworks",
       "name": "Languages & Frameworks",
-      "skills": ["Bash", "C", "C#/.NET", "Excel VBA", "Go/Golang", "Java", "JavaScript", "JSON", "Powershell", "React", "SQL", "Vue"]
+      "skills": ["Bash", "C", "C#/.NET", "Excel VBA", "Go/Golang", "Java", "JavaScript", "JSON", "Powershell", "React", "SQL", "TypeScript", "Vue"]
     },
     {
       "id": "tools",
