@@ -85,7 +85,9 @@ export function TimelineItem({
     >
       <div className="flex items-start gap-3">
         <span
-          className={`flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border ${styles.iconBox}`}
+          className={`flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border ${
+            showLogo ? 'border-0 bg-white dark:bg-white' : styles.iconBox
+          }`}
           aria-hidden
         >
           {showLogo ? (
