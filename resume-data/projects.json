@@ -6,6 +6,7 @@
       "startDate": "2026-03",
       "endDate": "2026-03",
       "icon": "code-xml",
+      "isThisSite": true,
       "githubUrl": "https://github.com/VivekP97/portfolio-website",
       "tasks": [
         "Developed a personal portfolio website using React, TypeScript, and Tailwind CSS to showcase my skills, experience, and projects",

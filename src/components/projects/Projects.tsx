@@ -8,12 +8,14 @@ export function Projects() {
         <h2 className="text-2xl font-bold text-sage-900 dark:text-sage-100 sm:text-3xl">
           Projects
         </h2>
-        <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-          {projectsData.projects.map((project, index) => (
-            <li key={project.id}>
-              <ProjectCard project={project} placeholderIconIndex={index} />
-            </li>
-          ))}
+        <ul className="mt-8 grid gap-6 sm:grid-cols-2 [&>li]:flex">
+          {[...projectsData.projects]
+            .sort((a, b) => b.startDate.localeCompare(a.startDate))
+            .map((project, index) => (
+              <li key={project.id}>
+                <ProjectCard project={project} placeholderIconIndex={index} />
+              </li>
+            ))}
         </ul>
       </div>
     </section>
