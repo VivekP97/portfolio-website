@@ -6,10 +6,11 @@ import type { TimelineItemType } from '../../types'
 
 const TIMELINE_TYPE_STYLES: Record<
   TimelineItemType,
-  { card: string; iconBox: string; icon: string; badge: string }
+  { card: string; cardLeftBorder: string; iconBox: string; icon: string; badge: string }
 > = {
   work: {
     card: 'border-blue-400/70 dark:border-blue-500/60',
+    cardLeftBorder: 'border-l-4 border-l-blue-500 dark:border-l-blue-400',
     iconBox: 'border-blue-300 bg-blue-50 dark:border-blue-600/60 dark:bg-blue-950/50',
     icon: 'text-blue-600 dark:text-blue-400',
     badge:
@@ -17,6 +18,7 @@ const TIMELINE_TYPE_STYLES: Record<
   },
   education: {
     card: 'border-amber-400/70 dark:border-amber-500/60',
+    cardLeftBorder: 'border-l-4 border-l-amber-500 dark:border-l-amber-400',
     iconBox: 'border-amber-300 bg-amber-50 dark:border-amber-600/60 dark:bg-amber-950/40',
     icon: 'text-amber-600 dark:text-amber-400',
     badge:
@@ -24,6 +26,7 @@ const TIMELINE_TYPE_STYLES: Record<
   },
   certification: {
     card: 'border-violet-400/70 dark:border-violet-500/60',
+    cardLeftBorder: 'border-l-4 border-l-violet-500 dark:border-l-violet-400',
     iconBox: 'border-violet-300 bg-violet-50 dark:border-violet-600/60 dark:bg-violet-950/50',
     icon: 'text-violet-600 dark:text-violet-400',
     badge:
@@ -79,7 +82,7 @@ export function TimelineItem({
             }
           : undefined
       }
-      className={`w-full max-w-md rounded-xl border bg-white p-4 text-left shadow-sm transition-shadow dark:bg-white/5 ${styles.card} ${
+      className={`w-full max-w-md rounded-xl border bg-white p-4 text-left shadow-sm transition-shadow dark:bg-white/5 ${styles.card} ${styles.cardLeftBorder} ${
         hasDetails ? 'cursor-pointer hover:shadow-md' : ''
       }`}
       aria-expanded={hasDetails ? expanded : undefined}
