@@ -6,7 +6,7 @@
       "jobTitle": "Full-Stack Software Developer",
       "startDate": "2025-05",
       "endDate": null,
-      "logo": "borrowell.webp",
+      "logo": "borrowell_logo.jpg",
       "skills": ["TypeScript", "C#/.NET", "React", "Expo Orbit", "Azure"],
       "responsibilities": [
         "Develop cross-platform features for 2 core customer-facing products",
@@ -76,7 +76,7 @@
       "id": "cibc-2",
       "company": "CIBC",
       "jobTitle": "Testing and Technical Services Analyst (Co-op)",
-      "logo": "cibc.png",
+      "logo": "cibc_logo.jpg",
       "startDate": "2018-05",
       "endDate": "2018-08",
       "skills": ["Excel VBA"],
@@ -88,7 +88,7 @@
       "id": "cibc-1",
       "company": "CIBC",
       "jobTitle": "Testing and Technical Services Analyst (Co-op)",
-      "logo": "cibc.png",
+      "logo": "cibc_logo.jpg",
       "startDate": "2017-05",
       "endDate": "2017-08",
       "skills": ["Excel VBA"],
@@ -125,6 +125,14 @@
       "startDate": "2026-01",
       "endDate": "2026-02",
       "skills": ["Artificial Intelligence", "Embeddings", "Vector Databases", "Python", "Pydantic", "Evaluation", "Prompt Engineering", "RAG"]
+    },
+    {
+      "id": "application-security-for-developers",
+      "name": "Application Security for Developers",
+      "institution": "IBM",
+      "startDate": "2024-03",
+      "endDate": "2024-03",
+      "skills": []
     }
   ]
 }
