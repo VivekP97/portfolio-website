@@ -50,9 +50,13 @@ export function Timeline() {
   const sortedEntries = useMemo(() => {
     const entries = toEntries()
     return entries.sort((a, b) => {
-      if (!a.startDate) return 1
-      if (!b.startDate) return -1
-      return b.startDate.localeCompare(a.startDate)
+      const aOngoing = a.endDate == null
+      const bOngoing = b.endDate == null
+      if (aOngoing && !bOngoing) return -1
+      if (!aOngoing && bOngoing) return 1
+      if (aOngoing && bOngoing)
+        return (b.startDate ?? '').localeCompare(a.startDate ?? '')
+      return (b.endDate ?? '').localeCompare(a.endDate ?? '')
     })
   }, [])
 
