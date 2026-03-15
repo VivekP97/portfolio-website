@@ -54,9 +54,9 @@ export function Timeline() {
       const bOngoing = b.endDate == null
       if (aOngoing && !bOngoing) return -1
       if (!aOngoing && bOngoing) return 1
-      if (aOngoing && bOngoing)
-        return (b.startDate ?? '').localeCompare(a.startDate ?? '')
-      return (b.endDate ?? '').localeCompare(a.endDate ?? '')
+      if (!a.startDate) return 1
+      if (!b.startDate) return -1
+      return b.startDate.localeCompare(a.startDate)
     })
   }, [])
 
