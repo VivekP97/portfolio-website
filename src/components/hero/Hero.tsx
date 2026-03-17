@@ -3,17 +3,20 @@ import { heroData } from '../../data/resumeData'
 
 export function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-[75vh] flex-col items-center justify-center px-4 py-12 text-center sm:min-h-[85vh] sm:px-6 sm:py-16 md:py-20">
-      <div className="mx-auto max-w-4xl hero-enter-animation">
-        <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          {heroData.name}
-        </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-sage-700 dark:text-sage-300 sm:mt-6 sm:text-lg sm:leading-loose [text-wrap:balance]">
-          {heroData.professionalStatement}
-        </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:mt-8">
-          <ScrollToTimelineButton />
-          <ResumeDownloadButton url={heroData.resumePdfUrl} />
+    <section id="hero" className="relative flex min-h-[75vh] flex-col px-4 py-12 sm:min-h-[85vh] sm:px-6 sm:py-16 md:py-20">
+      {/* Content centered in the space above "Scroll to explore" so they never overlap */}
+      <div className="flex min-h-0 flex-1 flex-col items-center justify-center text-center">
+        <div className="mx-auto max-w-4xl hero-enter-animation">
+          <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            {heroData.name}
+          </h1>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-sage-700 dark:text-sage-300 sm:mt-6 sm:text-lg sm:leading-loose [text-wrap:balance]">
+            {heroData.professionalStatement}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:mt-8">
+            <ScrollToTimelineButton />
+            <ResumeDownloadButton url={heroData.resumePdfUrl} />
+          </div>
         </div>
       </div>
       <ScrollToExplore />
@@ -29,7 +32,7 @@ function ScrollToExplore() {
     <button
       type="button"
       onClick={scrollToTimeline}
-      className="absolute bottom-6 left-1/2 flex flex-col items-center gap-2 -translate-x-1/2 text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 transition-colors sm:bottom-8"
+      className="flex shrink-0 flex-col items-center gap-2 py-6 text-sage-600 dark:text-sage-400 hover:text-sage-800 dark:hover:text-sage-200 transition-colors sm:py-8"
       aria-label="Scroll to explore"
     >
       <span className="text-sm font-medium">Scroll to explore</span>
