@@ -37,6 +37,11 @@ Data is stored in `resume-data/hero.json`. Content (e.g. professional statement)
 - `professionalStatement` (string, required) – Full statement; render as-is.
 - `resumePdfUrl` (string, required) – Path or URL to the resume PDF for the download button.
 
+## Responsive behaviour
+
+- **Typography and spacing**: Heading and statement scale by viewport: smaller base sizes on mobile (`text-4xl` / `text-base`), stepping up at `sm`, `md`, and `lg` breakpoints. Section padding and min-height are reduced on small screens (`min-h-[75vh]`, `py-12`) and increase at larger breakpoints.
+- **Overlap prevention**: The main content (name, statement, CTA buttons) lives in a flex-1 wrapper that is vertically centered in the space *above* the “Scroll to explore” element. “Scroll to explore” is in the layout flow (not absolutely positioned) with reserved padding (`py-6` / `sm:py-8`), so the Download Resume button and Scroll to explore never overlap on short or narrow viewports (e.g. small phones).
+
 ## Notes
 
 - Hero is the landing block; keep layout clean and aligned with the pastel mint-celadon theme and light/dark modes.

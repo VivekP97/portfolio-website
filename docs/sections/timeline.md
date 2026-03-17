@@ -114,6 +114,11 @@ Data is stored in `resume-data/timeline.json`. Structure is modular so new entri
 - **Icons**: Use distinct icons for “work”, “education”, and “certification” so employers can scan quickly. Each item may optionally specify a `logo` (PNG in `public/timeline-logos/`); when present, that image is shown instead of the default type icon. If the logo file is missing, the default icon is used.
 - **Dates**: Format for display (e.g. “Jan 2022 – Jun 2024” or “Jul 2024 – Present”) in the UI; keep storage format consistent (e.g. `YYYY-MM`). If `startDate` and `endDate` are the same month/year, display a single date (e.g. “Mar 2023”).
 
+## Responsive behaviour
+
+- **Below `md` (mobile)**: The vertical line is on the left side of the content area (`left-3`). Each timeline entry is a single row: a narrow left column (width matching the line) contains the type dot on the line, and the card fills the rest of the row. Dots are vertically centred with each card.
+- **From `md` up (desktop)**: The vertical line is centred (`left-1/2`). Entries use a three-column grid with content alternating left and right of the centre; the dot sits in the centre column on the line.
+
 ## Notes
 
 - **Logo folder**: Place PNG files in `public/timeline-logos/`. Reference them in the JSON with the optional `logo` field (filename only, e.g. `"logo": "company.png"`). If a logo is specified but the file is missing, the UI falls back to the default type icon.
