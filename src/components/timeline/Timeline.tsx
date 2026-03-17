@@ -91,55 +91,59 @@ export function Timeline() {
         </ul>
 
         <div className="relative mt-12">
-          {/* Vertical line */}
+          {/* Vertical line: left on mobile, centered on desktop */}
           <div
-            className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-px bg-sage-300 dark:bg-sage-700"
+            className="absolute left-3 top-0 bottom-0 w-px bg-sage-300 dark:bg-sage-700 md:left-1/2 md:-translate-x-px"
             aria-hidden
           />
           <ul className="space-y-0">
             {sortedEntries.map((entry, index) => {
               const isLeft = index % 2 === 0
+              const itemProps = {
+                type: entry.type,
+                title: entry.title,
+                subtitle: entry.subtitle,
+                startDate: entry.startDate,
+                endDate: entry.endDate,
+                responsibilities: entry.responsibilities,
+                skills: entry.skills,
+                logo: entry.logo,
+              }
+              const topPadding = index === 0 ? 'pt-0' : 'pt-6'
               return (
-                <li
-                  key={entry.id}
-                  className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 py-6 first:pt-0"
-                  style={{ gridTemplateColumns: '1fr auto 1fr' }}
-                >
-                  {isLeft ? (
-                    <div className="flex justify-end pr-4">
-                      <TimelineItem
-                        type={entry.type}
-                        title={entry.title}
-                        subtitle={entry.subtitle}
-                        startDate={entry.startDate}
-                        endDate={entry.endDate}
-                        responsibilities={entry.responsibilities}
-                        skills={entry.skills}
-                        logo={entry.logo}
-                      />
+                <li key={entry.id}>
+                  {/* Mobile: single column — dot on line, card to the right */}
+                  <div className={`flex items-center gap-4 pb-6 ${topPadding} md:hidden`}>
+                    <div className="relative z-10 flex w-6 shrink-0 justify-center" aria-hidden>
+                      <TimelineDot type={entry.type} />
                     </div>
-                  ) : (
-                    <div />
-                  )}
-                  <div className="relative z-10 flex justify-center" aria-hidden>
-                    <TimelineDot type={entry.type} />
+                    <div className="min-w-0 flex-1">
+                      <TimelineItem {...itemProps} />
+                    </div>
                   </div>
-                  {!isLeft ? (
-                    <div className="flex justify-start pl-4">
-                      <TimelineItem
-                        type={entry.type}
-                        title={entry.title}
-                        subtitle={entry.subtitle}
-                        startDate={entry.startDate}
-                        endDate={entry.endDate}
-                        responsibilities={entry.responsibilities}
-                        skills={entry.skills}
-                        logo={entry.logo}
-                      />
+                  {/* Desktop: alternating left/right with center line */}
+                  <div
+                    className={`hidden grid-cols-[1fr_auto_1fr] items-center gap-4 pb-6 ${topPadding} md:grid`}
+                    style={{ gridTemplateColumns: '1fr auto 1fr' }}
+                  >
+                    {isLeft ? (
+                      <div className="flex justify-end pr-4">
+                        <TimelineItem {...itemProps} />
+                      </div>
+                    ) : (
+                      <div />
+                    )}
+                    <div className="relative z-10 flex justify-center" aria-hidden>
+                      <TimelineDot type={entry.type} />
                     </div>
-                  ) : (
-                    <div />
-                  )}
+                    {!isLeft ? (
+                      <div className="flex justify-start pl-4">
+                        <TimelineItem {...itemProps} />
+                      </div>
+                    ) : (
+                      <div />
+                    )}
+                  </div>
                 </li>
               )
             })}

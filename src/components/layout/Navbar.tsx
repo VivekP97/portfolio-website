@@ -37,12 +37,15 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6" aria-label="Main navigation">
+      <nav className="mx-auto grid max-w-6xl grid-cols-3 items-center gap-4 px-4 py-3 sm:px-6 md:flex md:justify-between" aria-label="Main navigation">
         <a href="#hero" className="text-lg font-semibold text-black dark:text-white">
           VP
         </a>
 
-        {/* Desktop links */}
+        {/* Mobile: theme in center. Desktop: nav links */}
+        <div className="flex justify-center md:hidden">
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+        </div>
         <ul className="hidden items-center gap-1 md:flex">
           {SECTION_LINKS.map(({ href, label }) => {
             const isActive = activeSection !== null && href === `#${activeSection}`
@@ -73,16 +76,15 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </li>
         </ul>
 
-        <div className="flex items-center gap-2">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} />
-          {/* Mobile menu button */}
+        <div className="flex items-center justify-end gap-2">
+          <ThemeToggle theme={theme} onToggle={onToggleTheme} className="hidden md:block" />
           <button
             type="button"
             className="rounded-lg p-2 md:hidden hover:bg-sage-200 dark:hover:bg-sage-800"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
-            aria-label="Open menu"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
             <MenuIcon open={menuOpen} />
           </button>
@@ -92,7 +94,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`border-t border-sage-200 dark:border-sage-800 md:hidden ${menuOpen ? 'block' : 'hidden'}`}
+        className={`z-50 border-t border-sage-200 bg-sage-50 dark:border-sage-800 dark:bg-sage-950 md:hidden ${menuOpen ? 'block' : 'hidden'}`}
         aria-hidden={!menuOpen}
       >
         <ul className="flex flex-col gap-0 px-4 py-2">
